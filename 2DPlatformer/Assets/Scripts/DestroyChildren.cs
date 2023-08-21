@@ -11,6 +11,8 @@ public class DestroyChildren : MonoBehaviour
         {
             Destroy(transform.GetChild(i).gameObject, 2);
         }
+
+
     }
     void Update()
     {

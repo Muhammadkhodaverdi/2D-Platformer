@@ -94,6 +94,48 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: Enemy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3938
+      y: 4
+      width: 94
+      height: 97
+    spriteID: 0a61390f56b0fea4d85373a0a1cf5054
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3938, y: 4}
+    spritePosition: {x: 1978, y: 1308}
+  - name: Key
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3848
+      y: 173
+      width: 45
+      height: 45
+    spriteID: 7f8039a300317074f9ab2c198afd8686
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3852, y: 177}
+    spritePosition: {x: 1913, y: 1475}
   - name: Coin
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -102,7 +144,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 3852
-      y: 177
+      y: 220
       width: 21
       height: 21
     spriteID: c38b6d71907a32c429ab9127e14623b3
@@ -113,7 +155,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 3852, y: 177}
+    uvTransform: {x: 3852, y: 220}
     spritePosition: {x: 1885, y: 1482}
   - name: Player
     originalName: 
@@ -248,13 +290,33 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Enemy
+    spriteName: Enemy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0a61390f56b0fea4d85373a0a1cf5054
+    layerID: 19
+    mosaicPosition: {x: 3938, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Key
+    spriteName: Key
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7f8039a300317074f9ab2c198afd8686
+    layerID: 13
+    mosaicPosition: {x: 3852, y: 177}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Coin
     spriteName: Coin
     isGroup: 0
     parentIndex: -1
     spriteID: c38b6d71907a32c429ab9127e14623b3
     layerID: 12
-    mosaicPosition: {x: 3852, y: 177}
+    mosaicPosition: {x: 3852, y: 220}
     flatten: 0
     isImported: 1
     isVisible: 1

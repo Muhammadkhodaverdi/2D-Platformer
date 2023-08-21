@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    enum CollectableType { Coin, Health, Ammo }
+    enum CollectableType { Coin, Health, Ammo, InventoryItem }
     [SerializeField] private CollectableType collectableType;
 
-    private const string PLAYER = "Player";
-    private NewPlayer player;
-
+    [SerializeField] private string inventoryItemName;
+    [SerializeField] private Sprite inventorySprite;
 
     void Start()
     {
-        player = GameObject.Find(PLAYER).GetComponent<NewPlayer>();
+
     }
 
     void Update()
@@ -23,28 +22,32 @@ public class Collectable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == PLAYER)
+        if (collision.gameObject == NewPlayer.Instance.gameObject)
         {
             if (collectableType == CollectableType.Coin)
             {
-                player.coinCollected += 1;
+                NewPlayer.Instance.coinCollected += 1;
             }
             else if (collectableType == CollectableType.Health)
             {
-                if (player.health < 100)
+                if (NewPlayer.Instance.health < 100)
                 {
-                    player.health += 1;
+                    NewPlayer.Instance.health += 1;
                 }
             }
             else if (collectableType == CollectableType.Ammo)
             {
-                player.ammo += 1;
+                NewPlayer.Instance.ammo += 1;
+            }
+            else if (collectableType == CollectableType.InventoryItem)
+            {
+                NewPlayer.Instance.AddInventoryItem(inventoryItemName, inventorySprite);
             }
             else
             {
 
             }
-            player.UpdateUI();
+            NewPlayer.Instance.UpdateUI();
             Destroy(gameObject);
         }
     }
